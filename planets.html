@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Planets - Space Hub</title>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header .logo img {
+    width: 120px;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav ul li a {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.header nav ul li a:hover {
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-planets {
+    text-align: center;
+    background-image: url('space_background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 20px;
+    color: #fff;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-planets h1 {
+    font-size: 60px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.hero-planets p {
+    font-size: 20px;
+    margin: 10px 0;
+    animation: slideInFromBottom 1.5s ease-out;
+}
+
+/* Planets Section */
+.planets-info {
+    padding: 50px;
+    text-align: center;
+}
+
+.planets-info h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6600;
+}
+
+.planets-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.planet-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.planet-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.planet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.info-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.info-btn:hover {
+    background-color: #fff;
+    color: #ff6600;
+}
+
+/* Videos Section */
+.videos {
+    padding: 50px;
+    text-align: center;
+}
+
+.videos h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6600;
+}
+
+.videos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    color: #ff6600;
+}
+
+.modal-content p {
+    font-size: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+    </style>
+    <script src="planets.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="space_logo.png" alt="Space Hub Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="missions.html">Missions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-planets">
+        <h1>Explore the Planets</h1>
+        <p>Discover the wonders of our solar system and beyond!</p>
+    </section>
+
+    <!-- Planets Section -->
+    <section class="planets-info">
+        <h2>The Solar System Planets</h2>
+        <div class="planets-container">
+            <!-- Mercury -->
+            <div class="planet-card" id="mercury">
+                <img src="https://imgs.search.brave.com/-cM19PW_dylOOcMTwNsrOQ55H_GeBzaso4upiDfFszM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzE1LzEwLzM5/LzM2MF9GXzMxNTEw/Mzk2M19YWHpUdkJI/ZHV6RTFjY0hiZWx6/ZW9MZUdjeUtxSXB4/Zy5qcGc" alt="Mercury">
+                <h3>Mercury</h3>
+                <p>The smallest planet in our solar system and closest to the Sun.</p>
+                <button class="info-btn" onclick="openModal('Mercury')">More Info</button>
+            </div>
+
+            <!-- Venus -->
+            <div class="planet-card" id="venus">
+                <img src="https://imgs.search.brave.com/cODx14squ2UClkHR8Oc0BcdaJH2yTlnqGRQoeIdT6JM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtYXNzZXRzLm5h/c2EuZ292L2ltYWdl/L1BJQTAwMjcxL1BJ/QTAwMjcxfmxhcmdl/LmpwZz93PTE5MjAm/aD0xOTIwJmZpdD1j/bGlwJmNyb3A9ZmFj/ZXMsZm9jYWxwb2lu/dA" alt="Venus">
+                <h3>Venus</h3>
+                <p>Known as Earth's twin, Venus has a thick, toxic atmosphere and is the hottest planet.</p>
+                <button class="info-btn" onclick="openModal('Venus')">More Info</button>
+            </div>
+
+            <!-- Earth -->
+            <div class="planet-card" id="earth">
+                <img src="https://imgs.search.brave.com/Q6kyj9j2dapt3PNKE48vnEGQgMQLz7X1AonfmEkgooo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTMy/NTE1MDMwL3Bob3Rv/L2VhcnRoLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1qZlRD/YWV2TlFVeUNRWUJm/OE5KV0d1aWo2OXB4/a2J0T0puZ3hTSXYz/UG40PQ" alt="Earth">
+                <h3>Earth</h3>
+                <p>Our home planet, the only planet known to support life.</p>
+                <button class="info-btn" onclick="openModal('Earth')">More Info</button>
+            </div>
+
+            <!-- Mars -->
+            <div class="planet-card" id="mars">
+                <img src="https://imgs.search.brave.com/49FasnipF0w-WwFVDS7ZIEupm250aIGwqKu6G29Dhf8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zY2ll/bmNlLm5hc2EuZ292/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE2/LzA1LzEtbWFycy1u/YXNhLWdvdi1qcGcu/d2VicD93PTQwOTYm/Zm9ybWF0PXBuZw" alt="Mars">
+                <h3>Mars</h3>
+                <p>The Red Planet, with signs that water once flowed on its surface.</p>
+                <button class="info-btn" onclick="openModal('Mars')">More Info</button>
+            </div>
+
+            <!-- Jupiter -->
+            <div class="planet-card" id="jupiter">
+                <img src="https://imgs.search.brave.com/cQinQGpoK6kHmACnGAXclSUV64zzXhsr8zmPkvmg68w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zY2ll/bmNlLm5hc2EuZ292/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzA2L0p1cGl0ZXJf/YWdhaW5zdF9ibGFj/a19iYWNrZ3JvdW5k/X29mX3NwYWNlLWpw/ZWcud2VicD93PTQw/OTYmZm9ybWF0PXBu/Zw" alt="Jupiter">
+                <h3>Jupiter</h3>
+                <p>The largest planet in our solar system, famous for its Great Red Spot.</p>
+                <button class="info-btn" onclick="openModal('Jupiter')">More Info</button>
+            </div>
+
+            <!-- Saturn -->
+            <div class="planet-card" id="saturn">
+                <img src="https://imgs.search.brave.com/rwlwAObMD82MFlAOfvYTTdnriOZjyFUrLf__BxY8nJg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zY2ll/bmNlLm5hc2EuZ292/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDI0/LzA0L3BpYTAxMzgz/LmpwZz93PTQwOTYm/Zm9ybWF0PWpwZWc" alt="Saturn">
+                <h3>Saturn</h3>
+                <p>Famous for its stunning ring system, Saturn is the second-largest planet.</p>
+                <button class="info-btn" onclick="openModal('Saturn')">More Info</button>
+            </div>
+
+            <!-- Uranus -->
+            <div class="planet-card" id="uranus">
+                <img src="https://imgs.search.brave.com/d1GyF8ItDMgClbHAQhisWitNXJ7Xx8KscTD2nX5MagE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b3guYWMudWsvc2l0/ZXMvZmlsZXMvb3hm/b3JkL3N0eWxlcy9v/d19tZWRpdW1fZmVh/dHVyZS9zMy9maWVs/ZC9maWVsZF9pbWFn/ZV9tYWluL0dldHR5/JTIwdXJhbnVzJTIw/Mi5qcGc_aXRvaz12/TWt6aHJjbg" alt="Uranus">
+                <h3>Uranus</h3>
+                <p>A gas giant with a unique tilt, spinning on its side.</p>
+                <button class="info-btn" onclick="openModal('Uranus')">More Info</button>
+            </div>
+
+            <!-- Neptune -->
+            <div class="planet-card" id="neptune">
+                <img src="https://imgs.search.brave.com/DYpIk2BFQKQ0skvUZkXf49dZIamUL2cvDav2Vp6X_CM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zY2ll/bmNlLm5hc2EuZ292/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDI0/LzAzL3BpYTAxNDky/LW5lcHR1bmUtZnVs/bC1kaXNrLTE2eDkt/MS5qcGc_dz00MDk2/JmZvcm1hdD1qcGVn" alt="Neptune">
+                <h3>Neptune</h3>
+                <p>The farthest planet from the Sun, known for its intense blue color and storms.</p>
+                <button class="info-btn" onclick="openModal('Neptune')">More Info</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos">
+        <h2>Videos About Planets</h2>
+        <div class="videos-container">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/libKVRa01L8" title="Planet Exploration"></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/Qd6nLM2QlWw" title="Solar System Wonders"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Section for Planet Info -->
+    <div id="planetModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="planetName">Planet Name</h2>
+            <p id="planetDescription">Detailed information about the planet goes here.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Space Hub. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
+            <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
+

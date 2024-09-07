@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #f1e6e6;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://imgs.search.brave.com/2JogXOjNp5lFkbY--zDmRIoiU4evIMMWs8sEN-yvjA0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzQxL1NwYWNlX1No/dXR0bGVfQ29sdW1i/aWFfbGF1bmNoaW5n/LmpwZw') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    animation: spaceAnimation 60s linear infinite;
+}
+
+@keyframes spaceAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+header {
+    background-color: rgba(10, 10, 10, 0.989);
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #f2eded;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    background-image: 'https://imgs.search.brave.com/ynYUnwzqrtqBY1lUpzipqX78RFWAWiDQ4wbuKtdBmfU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9wbGFuZXRzLWxp/bmV1cF8xNjEzNjIt/NzU5MzEuanBnP3Np/emU9NjI2JmV4dD1q/cGc' ;
+    color: #020202;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-image {
+    max-width:50%;
+    height: auto;
+    border: 5px solid #fff;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

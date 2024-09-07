@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars - Space Hub</title>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #111;
+}
+
+.header .logo img {
+    width: 120px;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://imgs.search.brave.com/xdVWkmbaaxt9bBO2yA6SPv6vzLu78Nfhkmjyp2udbxs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC9BMEtMQ3lY/LmpwZw') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Starry Background */
+.starry-night {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Stars Background */
+.star-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://imgs.search.brave.com/GWZ6WWZfmDS6NTR5QzW0X6rAeovB5rbqgwTqHqVaB6c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNi8x/MS8yOS8wNS80NS9h/c3Ryb25vbXktMTg2/NzYxNl82NDAuanBn') repeat top center;
+    z-index: 1;
+    animation: move-stars 200s linear infinite;
+}
+
+/* Twinkling Stars Effect */
+.star-twinkling {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 2;
+    box-shadow: 0 0 1px 2px rgba(255,255,255,0.1);
+    animation: twinkling 1.5s infinite alternate;
+}
+
+/* Glowing Stars */
+.star-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 3;
+    box-shadow: 0 0 10px 15px rgba(255,255,255,0.05);
+    animation: glow 5s infinite alternate;
+}
+
+/* Animations */
+@keyframes move-stars {
+    0% { background-position: 0 0; }
+    100% { background-position: -10000px 0; }
+}
+
+@keyframes twinkling {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px 15px rgba(255, 255, 255, 0.05); }
+    to { box-shadow: 0 0 20px 30px rgba(255, 255, 255, 0.1); }
+}
+
+/* Star Info Section */
+.star-info {
+    text-align: center;
+    padding: 50px;
+    background: #111;
+}
+
+.star-info h2 {
+    font-size: 36px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.star-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Constellations Section */
+.constellations {
+    padding: 50px;
+    background-color: #222;
+    text-align: center;
+}
+
+.constellations h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ffcc00;
+}
+
+.constellation-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.constellation {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    text-align: center;
+}
+
+.constellation img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.constellation:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    padding: 50px;
+    background: #111;
+}
+
+.video-section h2 {
+    font-size: 36px;
+    color: #ffcc00;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-container iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="space_logo.png" alt="Space Hub Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>The Stars of Our Galaxy</h1>
+        <p>Journey through the brilliance of the stars, each one a celestial masterpiece.</p>
+    </section>
+
+    <!-- Star Twinkling Background -->
+    <section class="starry-night">
+        <div class="star-twinkling"></div>
+        <div class="star-background"></div>
+        <div class="star-glow"></div>
+    </section>
+
+    <!-- Star Info Section -->
+    <section class="star-info">
+        <h2>About Stars</h2>
+        <p>Stars are the fundamental building blocks of galaxies. These luminous celestial bodies are made up of hot gases, primarily hydrogen and helium, and they produce light and heat through nuclear fusion.</p>
+    </section>
+
+    <!-- Featured Constellations Section -->
+    <section class="constellations">
+        <h2>Famous Constellations</h2>
+        <div class="constellation-container">
+            <div class="constellation" id="orion">
+                <img src="https://imgs.search.brave.com/47I_MHIGf1tpdQoEbpi2xONHxxdaj2x89kEVpI7NsK8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTA3/NTcyOTgvcGhvdG8v/dW5zcGVjaWZpZWQt/dGhlLWNvbnN0ZWxs/YXRpb24tb2Ytb3Jp/b24tdGhlLWh1bnRl/ci10YWtlbi1hdC0w/NS00Ny1hbS1waG90/b2dyYXBoLWJ5LWph/bWllLWNvb3Blci5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/WTZJVmNQeG1VRmMw/RDF5Y3lBZDlXOTVV/S1dOYUlKNVdTVkhZ/dHNfNzNEdz0" alt="Orion Constellation">
+                <h3>Orion</h3>
+                <p>One of the most recognizable constellations, Orion represents a hunter from Greek mythology.</p>
+            </div>
+
+            <div class="constellation" id="ursa-major">
+                <img src="https://imgs.search.brave.com/JsZ7PkHfGlbfcxAOieXt27GsLwsWkIYXRVeOLOgJG8M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE5/NTk3MjQ2L3Bob3Rv/L3Vyc2EtbWFqb3It/Y29uc3RlbGxhdGlv/bi5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Q3NzRXFvbFJu/M2ktVHZ1Wks3RDJR/OGs0bU9CWlYtbTNm/WU1STENrMFlXaz0" alt="Ursa Major Constellation">
+                <h3>Ursa Major</h3>
+                <p>Known as the Great Bear, Ursa Major is famous for containing the Big Dipper asterism.</p>
+            </div>
+
+            <div class="constellation" id="cassiopeia">
+                <img src="https://imgs.search.brave.com/FR5YjYXy0fFJ0RHeNXXweMJb7hdjih0dP9Cd1i8Oq8w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE4/NjcyODc3Mi9waG90/by9jYXNzaW9wZWlh/LWNvbnN0ZWxsYXRp/b24tb24tc3RhcnJ5/LXNreS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9Tm1zbUMy/RzBxcHFGejRRemVV/VllGdWd6YjRvWDho/aGIwVFpuU0dzcW1E/QT0" alt="Cassiopeia Constellation">
+                <h3>Cassiopeia</h3>
+                <p>This W-shaped constellation is named after a vain queen in Greek mythology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Watch the Stars</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/XskpuqVxLpA" title="Stars Documentary" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Space Hub. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
+            <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
