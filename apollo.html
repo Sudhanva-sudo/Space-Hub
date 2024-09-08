@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Missions - Space Hub</title>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header .logo img {
+    width: 120px;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav ul li a {
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.header nav ul li a:hover {
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-apollo {
+    text-align: center;
+    background-image: url('https://imgs.search.brave.com/h-Y6PW6ZlhElcoi_slrKRDV3kaJKtNxR2win5NVaF5k/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC9pN0xuNG5L/LmpwZw');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 20px;
+    color: #fff;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-apollo h1 {
+    font-size: 60px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.hero-apollo p {
+    font-size: 20px;
+    margin: 10px 0;
+    animation: slideInFromBottom 1.5s ease-out;
+}
+
+/* Missions Section */
+.missions {
+    padding: 50px;
+    text-align: center;
+}
+
+.missions h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6600;
+}
+
+.missions-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mission-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mission-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mission-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.learn-more:hover {
+    background-color: #fff;
+    color: #ff6600;
+}
+
+/* Interactive Section */
+.interactive {
+    padding: 50px;
+    background-color: #222;
+    text-align: center;
+}
+
+.interactive h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.interactive p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #fff;
+    color: #ff6600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="space_logo.png" alt="Space Hub Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="missions.html">Missions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-apollo">
+        <h1>The Apollo Missions</h1>
+        <p>Journey through the historic missions that took humanity to the Moon and beyond.</p>
+    </section>
+
+    <!-- Missions Section -->
+    <section class="missions">
+        <h2>Key Apollo Missions</h2>
+        <div class="missions-container">
+            <!-- Apollo 11 -->
+            <div class="mission-card">
+                <img src="https://imgs.search.brave.com/kX3jvrLOJmRt9NrJJbAS8uCN6IhbsDo0-EbxNKLWRRs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vMDEvMjE2NzAx/LTEzOC0xNEUwNDE4/NC9KdXN0LXRoZS1m/YWN0cy1BcG9sbG8t/MTEtbW9vbi1sYW5k/aW5nLmpwZz93PTgw/MCZoPTQ1MCZjPWNy/b3A" alt="Apollo 11">
+                <h3>Apollo 11</h3>
+                <p>First manned Moon landing mission, where Neil Armstrong and Buzz Aldrin set foot on the lunar surface in 1969.</p>
+                <a href="Apollo11.html" class="learn-more">Learn More</a>
+            </div>
+            <!-- Apollo 13 -->
+            <div class="mission-card">
+                <img src="https://imgs.search.brave.com/TQ6V-DEK7y-JpEFmpXnA7BnQmRGl7EkUBvU241abYg8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9k/L2RmL0Fwb2xsb18x/M19TYXR1cm5fVl9k/dXJpbmdfcm9sbG91/dC5qcGc" alt="Apollo 13">
+                <h3>Apollo 13</h3>
+                <p>Known for its dramatic in-flight emergency and successful safe return to Earth in 1970.</p>
+                <a href="Apollo13.html" class="learn-more">Learn More</a>
+            </div>
+            <!-- Apollo 17 -->
+            <div class="mission-card">
+                <img src="https://imgs.search.brave.com/NgF7pNLcCsyFXPzFa4DaqhSoRF-Cvmj8EjStQk0nZH8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3p5/WjJLY0JkUnoyNlNu/ZG1mcWlhU0QtMzIw/LTgwLmpwZw" alt="Apollo 17">
+                <h3>Apollo 17</h3>
+                <p>The final Apollo mission that conducted extensive geological surveys and exploration on the Moon in 1972.</p>
+                <a href="Apollo17.html" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section -->
+    <section class="interactive">
+        <h2>Experience the Apollo Missions</h2>
+        <p>Explore detailed information and interactive content about each mission.</p>
+        <a href="Explore.html" class="explore-btn">Explore More</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Space Hub. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
+            <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
